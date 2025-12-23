@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: /miniproject4-next
     destination: /home/ubuntu/app/miniproject4-next
     overwrite: true
 
