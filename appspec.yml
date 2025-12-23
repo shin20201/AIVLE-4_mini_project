@@ -2,14 +2,12 @@ version: 0.0
 os: linux
 
 files:
-  # 🔥 deploy/ 기준 전체를 그대로 복사 (구조 보존)
   - source: /
-    destination: /home/ubuntu/app
+    destination: /home/ubuntu/app/miniproject4-next
     overwrite: true
 
 permissions:
-  # 🔥 부모 디렉토리까지 포함 (권한 문제 종결)
-  - object: /home/ubuntu/app
+  - object: /home/ubuntu/app/miniproject4-next
     pattern: "**"
     owner: ubuntu
     group: ubuntu
@@ -26,5 +24,5 @@ hooks:
 
   ApplicationStart:
     - location: scripts/start.sh
-      timeout: 120
+      timeout: 180
       runas: ubuntu
